@@ -366,6 +366,7 @@ class _MainWebViewState extends State<MainWebView> {
       _controller.goBack();
       return false;
     }
+    if (!mounted) return false;
     return await showDialog(
       context: context,
       builder: (context) => AlertDialog(
